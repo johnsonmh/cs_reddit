@@ -20,7 +20,7 @@ def fetchPosts():
 	global already_seen_posts
 	reddit = praw.Reddit(user_agent='cscareerquestions_company_mentions')
 	cscq = reddit.get_subreddit('cscareerquestions')
-	posts = cscq.get_top_from_all(limit=100)
+	posts = cscq.get_top_from_all(limit="none")
 	newPosts = []
 	
 	for post in posts: #go through every post
